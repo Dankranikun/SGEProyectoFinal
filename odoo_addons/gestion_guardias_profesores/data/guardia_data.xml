@@ -1,0 +1,10 @@
+<odoo>
+    <record id="grupo_1A" model="gestion.grupo">
+        <field name="name">1A</field>
+        <field name="horario">08:00 - 09:00</field>
+    </record>
+    <record id="grupo_1B" model="gestion.grupo">
+        <field name="name">1B</field>
+        <field name="horario">09:00 - 10:00</field>
+    </record>
+</odoo>

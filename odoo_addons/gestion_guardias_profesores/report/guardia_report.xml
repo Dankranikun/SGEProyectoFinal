@@ -1,0 +1,25 @@
+<odoo>
+    <report
+        id="guardia_report"
+        model="gestion.guardias"
+        string="Informe de Guardias"
+        report_type="qweb-pdf"
+        file="gestion_guardias_profesores.report_guardia"
+        name="gestion_guardias_profesores.report_guardia"
+    />
+
+    <template id="report_guardia">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="page">
+                    <h2>Informe de Guardia</h2>
+                    <p><strong>Fecha:</strong> <t t-esc="o.fecha"/></p>
+                    <p><strong>Profesor:</strong> <t t-esc="o.profesor_id.name"/></p>
+                    <p><strong>Grupo:</strong> <t t-esc="o.grupo_id.name"/></p>
+                    <p><strong>Hora:</strong> <t t-esc="o.hora"/></p>
+                    <p><strong>Estado:</strong> <t t-esc="o.estado"/></p>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

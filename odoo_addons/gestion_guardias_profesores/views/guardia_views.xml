@@ -1,0 +1,53 @@
+<odoo>
+    <!-- Vista Tree -->
+    <record id="view_guardia_tree" model="ir.ui.view">
+        <field name="name">guardia.tree</field>
+        <field name="model">gestion.guardias</field>
+        <field name="arch" type="xml">
+            <tree string="Gestión de Guardias">
+                <field name="fecha"/>
+                <field name="profesor_id"/>
+                <field name="grupo_id"/>
+                <field name="hora"/>
+                <field name="estado"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form -->
+    <record id="view_guardia_form" model="ir.ui.view">
+        <field name="name">guardia.form</field>
+        <field name="model">gestion.guardias</field>
+        <field name="arch" type="xml">
+            <form string="Gestión de Guardias">
+                <sheet>
+                    <group>
+                        <field name="fecha"/>
+                        <field name="profesor_id"/>
+                        <field name="grupo_id"/>
+                        <field name="hora"/>
+                        <field name="estado"/>
+                    </group>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_marcar_realizada" 
+                                type="object" 
+                                string="Marcar como Realizada" 
+                                class="oe_stat_button" 
+                                icon="fa-check" 
+                                invisible="estado == 'realizada'"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción -->
+    <record id="accion_control_guardias" model="ir.actions.act_window">
+        <field name="name">Control de Guardias</field>
+        <field name="res_model">gestion.guardias</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Aquí puedes gestionar las guardias de profesores. Usa "Crear" para agregar una nueva guardia.</p>
+        </field>
+    </record>
+</odoo>

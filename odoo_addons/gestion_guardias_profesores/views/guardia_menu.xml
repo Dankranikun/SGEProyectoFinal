@@ -1,0 +1,4 @@
+<odoo>
+    <menuitem id="menu_guardia_root" name="Gestión de Guardias" sequence="10"/>
+    <menuitem id="menu_guardia_profesor" name="Control de Guardias" parent="menu_guardia_root" sequence="10" action="accion_control_guardias"/>
+</odoo>
