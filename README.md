@@ -7,6 +7,7 @@ Proyecto final de:
   - Pedro Llorente.
 
 La aplicación permite:
- Visualizar grupos sin profesor en un momento determinado.
- Asignar profesores de guardia a dichos grupos.
- Insertar o eliminar grupos sin profesor y profesores de guardia.
+  - Visualizar grupos sin profesor en un momento determinado.
+  - Asignar profesores de guardia a dichos grupos.
+  - Insertar o eliminar grupos sin profesor y profesores de guardia.
+
